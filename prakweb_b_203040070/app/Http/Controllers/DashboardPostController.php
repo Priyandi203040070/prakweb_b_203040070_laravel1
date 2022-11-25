@@ -51,7 +51,7 @@ class DashboardPostController extends Controller
         ]);
 
         if($request->file('image')) {
-            $validatedData['iamge']= $request->file('image')->store('post-image');
+            $validatedData['image']= $request->file('image')->store('post-images');
         }
 
         $validatedData['user_id'] = auth()->user()->id;
